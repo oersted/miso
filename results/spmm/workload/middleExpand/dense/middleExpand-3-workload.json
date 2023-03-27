@@ -1,0 +1,28 @@
+{
+    "kernelName": "Dense",
+    "inputs": {
+        "matrixA": {
+            "fileName": "/root/SpMMBenchmarks/data/middleExpand/middleExpand.matA-20-3600-120-0.bincsr",
+            "m": 20,
+            "n": 3600,
+            "nnz": 2400,
+            "edgeFactor": 120.0
+        },
+        "matrixB": {
+            "fileName": "/root/SpMMBenchmarks/data/middleExpand/middleExpand.matB-3600-1000000-120-0.bincsr",
+            "m": 3600,
+            "n": 1000000,
+            "nnz": 432000,
+            "edgeFactor": 120.0
+        }
+    },
+    "outputs": {
+        "matrixC": {
+            "fileName": "/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-matrixC.bincsr",
+            "m": null,
+            "n": null,
+            "nnz": null,
+            "edgeFactor": null
+        }
+    }
+}
