@@ -1,0 +1,34 @@
+Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 10:27:53
+gem5 executing on 2e10b002758d, pid 45
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 8 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=8,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/basicProblemExplore/build/SetOperation -o 'file SetOperation/10000_o_5000.bin scalar 0 simd 5'
+
+Reset SpSpLatency!
+{'v': 8, 'v2': 16, 'logV': 3, 'logV2': 4, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+Load a: 10000
+Load b: 9998
+Result match
+Result match
+Result match
+Result match
+[   Union Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[     Union SIMD]	mean =   3.19e+04(ns)	sd =   3.40e+02(ns)	nsample =     5
+[Intersect Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[ Intersect SIMD]	mean =   2.77e+04(ns)	sd =   6.30e+01(ns)	nsample =     5
+[     XOR Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[       XOR SIMD]	mean =   3.16e+04(ns)	sd =   5.35e+02(ns)	nsample =     5
+[    Diff Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[      Diff SIMD]	mean =   2.84e+04(ns)	sd =   3.81e+01(ns)	nsample =     5
+Exiting @ tick 1412924000 because exiting with last active thread context
