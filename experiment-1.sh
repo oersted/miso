@@ -24,7 +24,7 @@ SIMD_REPEAT=5 # the number of repeats executions for simd (proposed) to take
 #     (time python gem5ArmRunner.py ${SIMD_WIDTH} ComplexJoin MulComplex file ComplexJoin/tensor_complex.bin scalar ${SCALAR_REPEAT} simd ${SIMD_REPEAT}) 2>&1 | tee "/results/join-mulcomplex-tensor-${SIMD_WIDTH}.log"
 
 #     ## (1 kernel here) A merge operation in shortest path
-#     (time python gem5ArmRunner.py ${SIMD_WIDTH} ComplexJoin ShortestPath file ComplexJoin/vector_real.bin scalar ${SCALAR_REPEAT} simd ${SIMD_REPEAT}) 2>&1 | tee "/results/join-shortestpath-tensor-${SIMD_WIDTH}.log"
+#     (time python gem5ArmRunner.py ${SIMD_WIDTH} ComplexJoin ShortestPath file ComplexJoin/vector_real.bin scalar ${SCALAR_REPEAT} simd ${SIMD_REPEAT}) 2>&1 | tee "/results/join-shortestpath-vector-${SIMD_WIDTH}.log"
 
 #     (time python gem5ArmRunner.py ${SIMD_WIDTH} Sort scalar ${SCALAR_REPEAT} simd ${SIMD_REPEAT}) 2>&1 | tee "/results/sort-${SIMD_WIDTH}.log"
 #     (time python gem5ArmRunner.py ${SIMD_WIDTH} SortKV scalar ${SCALAR_REPEAT} simd ${SIMD_REPEAT}) 2>&1 | tee "/results/sortkv-${SIMD_WIDTH}.log"

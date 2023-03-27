@@ -1,0 +1,50 @@
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+0: system.remote_gdb: listening for remote gdb on port 7000
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 12:06:46
+gem5 executing on fb63e0b28780, pid 183
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 32 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=32,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/basicProblemExplore/build/ComplexJoin -o 'Add Mul file ComplexJoin/vector_real.bin scalar 0 simd 5'
+
+Reset SpSpLatency!
+{'v': 32, 'v2': 64, 'logV': 5, 'logV2': 6, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: ignoring syscall mprotect(...)
+Tensor           : mode =  1, valNum =  1, nnz =  10000
+Tensor           : mode =  1, valNum =  1, nnz =  10000
+Executing kernel: Add
+Kernel Add: Result match!
+Tensor           : mode =  1, valNum =  1, nnz =  14982
+Executing kernel: Mul
+Kernel Mul: Result match!
+Tensor           : mode =  1, valNum =  1, nnz =   5018
+Pass!
+[     Add Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[       Add SIMD]	mean =   1.48e+04(ns)	sd =   7.45e+01(ns)	nsample =     5
+[     Mul Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[       Mul SIMD]	mean =   1.03e+04(ns)	sd =   5.78e+01(ns)	nsample =     5
+Exiting @ tick 894511500 because exiting with last active thread context
+
+real	0m5.001s
+user	0m4.981s
+sys	0m0.019s

@@ -1,0 +1,63 @@
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+0: system.remote_gdb: listening for remote gdb on port 7000
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 12:02:40
+gem5 executing on fb63e0b28780, pid 91
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 8 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=8,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/basicProblemExplore/build/JoinOp -o 'file JoinOp/10000_o_5000.bin scalar 0 simd 5'
+
+Reset SpSpLatency!
+{'v': 8, 'v2': 16, 'logV': 3, 'logV2': 4, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: ignoring syscall mprotect(...)
+Current Working Directory: "/root/basicProblemExplore/"
+Attempt to open file: JoinOp/10000_o_5000.bin
+Load aidx: 10000
+Load aval: 10000
+Load bidx: 10000
+Load bval: 10000
+For Join-Full-Outer - join, g_lenc = 14999
+Correct!
+For Join-Inner - join, g_lenc =  5001
+Correct!
+For Join-Outer-Ex - join, g_lenc =  9998
+Correct!
+For Join-Left-Ex - join, g_lenc =  4999
+Correct!
+For Join-Left - join, g_lenc = 10000
+Correct!
+[Join-Full-Outer Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[Join-Full-Outer SIMD]	mean =   4.73e+04(ns)	sd =   3.17e+02(ns)	nsample =     5
+[Join-Inner Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[Join-Inner SIMD]	mean =   3.30e+04(ns)	sd =   9.33e+01(ns)	nsample =     5
+[Join-Outer-Ex Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[Join-Outer-Ex SIMD]	mean =   4.01e+04(ns)	sd =   5.96e+02(ns)	nsample =     5
+[Join-Left-Ex Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[Join-Left-Ex SIMD]	mean =   3.52e+04(ns)	sd =   9.39e+01(ns)	nsample =     5
+[Join-Left Scalar]	mean =        nan(ns)	sd =       -nan(ns)	nsample =     0
+[ Join-Left SIMD]	mean =   3.51e+04(ns)	sd =   8.56e+01(ns)	nsample =     5
+Exiting @ tick 2164584500 because exiting with last active thread context
+
+real	0m12.313s
+user	0m12.252s
+sys	0m0.060s
