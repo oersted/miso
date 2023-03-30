@@ -1,0 +1,25 @@
+Gather information from following files:
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-3-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-0-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-1-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-2-workload-report.json
+/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-3-workload-report.json
+
+real	0m0.351s
+user	0m0.319s
+sys	0m0.032s

@@ -1,0 +1,51 @@
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+0: system.remote_gdb: listening for remote gdb on port 7000
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 11:56:03
+gem5 executing on fb63e0b28780, pid 43
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/basicProblemExplore/build/SetOperation -o 'file SetOperation/10000_o_5000.bin scalar 5 simd 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: ignoring syscall mprotect(...)
+Load a: 10000
+Load b: 10000
+Result match
+Result match
+Result match
+Result match
+[   Union Scalar]	mean =   1.31e+05(ns)	sd =   3.31e+02(ns)	nsample =     5
+[     Union SIMD]	mean =   6.75e+04(ns)	sd =   5.61e+02(ns)	nsample =     5
+[Intersect Scalar]	mean =   1.31e+05(ns)	sd =   7.03e+02(ns)	nsample =     5
+[ Intersect SIMD]	mean =   5.42e+04(ns)	sd =   6.12e+01(ns)	nsample =     5
+[     XOR Scalar]	mean =   1.30e+05(ns)	sd =   4.34e+02(ns)	nsample =     5
+[       XOR SIMD]	mean =   5.91e+04(ns)	sd =   5.98e+02(ns)	nsample =     5
+[    Diff Scalar]	mean =   1.29e+05(ns)	sd =   2.25e+02(ns)	nsample =     5
+[      Diff SIMD]	mean =   5.58e+04(ns)	sd =   4.75e+01(ns)	nsample =     5
+Exiting @ tick 4725221500 because exiting with last active thread context
+
+real	0m24.876s
+user	0m24.765s
+sys	0m0.020s

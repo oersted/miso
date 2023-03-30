@@ -1,0 +1,116 @@
+{
+    "kernelName": "Eigen",
+    "inputs": {
+        "matrixA": {
+            "fileName": "/root/SpMMBenchmarks/data/middleExpand/middleExpand.matA-20-3600-90-0.bincsr",
+            "m": 20,
+            "n": 3600,
+            "nnz": 1800,
+            "edgeFactor": 90.0
+        },
+        "matrixB": {
+            "fileName": "/root/SpMMBenchmarks/data/middleExpand/middleExpand.matB-3600-1000000-90-0.bincsr",
+            "m": 3600,
+            "n": 1000000,
+            "nnz": 324000,
+            "edgeFactor": 90.0
+        }
+    },
+    "outputs": {
+        "matrixC": {
+            "fileName": "/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-2-matrixC.bincsr",
+            "m": 20,
+            "n": 1000000,
+            "nnz": 161794,
+            "edgeFactor": 8089.7
+        }
+    },
+    "timmer": {
+        "loadCSR_warmup": {
+            "operation": "loadCSR_warmup",
+            "mean": null,
+            "sd": null,
+            "nSamples": 0,
+            "records": []
+        },
+        "loadCSR": {
+            "operation": "loadCSR",
+            "mean": 17478.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                17478.0
+            ]
+        },
+        "convertCSR2X_warmup": {
+            "operation": "convertCSR2X_warmup",
+            "mean": null,
+            "sd": null,
+            "nSamples": 0,
+            "records": []
+        },
+        "convertCSR2X": {
+            "operation": "convertCSR2X",
+            "mean": 47270515.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                47270515.0
+            ]
+        },
+        "SpGemm_warmup": {
+            "operation": "SpGemm_warmup",
+            "mean": 24611838.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                24611838.0
+            ]
+        },
+        "SpGemm": {
+            "operation": "SpGemm",
+            "mean": 24505692.0,
+            "sd": 29347.324702602793,
+            "nSamples": 5,
+            "records": [
+                24543536.0,
+                24506728.0,
+                24468110.0,
+                24532060.0,
+                24478026.0
+            ]
+        },
+        "convertX2CSR_warmup": {
+            "operation": "convertX2CSR_warmup",
+            "mean": null,
+            "sd": null,
+            "nSamples": 0,
+            "records": []
+        },
+        "convertX2CSR": {
+            "operation": "convertX2CSR",
+            "mean": 266745.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                266745.0
+            ]
+        },
+        "writeCSR_warmup": {
+            "operation": "writeCSR_warmup",
+            "mean": null,
+            "sd": null,
+            "nSamples": 0,
+            "records": []
+        },
+        "writeCSR": {
+            "operation": "writeCSR",
+            "mean": 11134.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                11134.0
+            ]
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "kernelName": "Merge",
+    "inputs": {
+        "matrixA": {
+            "fileName": "/root/SpMMBenchmarks/data/middleExpand/middleExpand.matA-20-3600-90-0.bincsr",
+            "m": 20,
+            "n": 3600,
+            "nnz": 1800,
+            "edgeFactor": 90.0
+        },
+        "matrixB": {
+            "fileName": "/root/SpMMBenchmarks/data/middleExpand/middleExpand.matB-3600-1000000-90-0.bincsr",
+            "m": 3600,
+            "n": 1000000,
+            "nnz": 324000,
+            "edgeFactor": 90.0
+        }
+    },
+    "outputs": {
+        "matrixC": {
+            "fileName": "/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-matrixC.bincsr",
+            "m": 20,
+            "n": 1000000,
+            "nnz": 161794,
+            "edgeFactor": 8089.7
+        }
+    },
+    "timmer": {
+        "loadCSR_warmup": {
+            "operation": "loadCSR_warmup",
+            "mean": null,
+            "sd": null,
+            "nSamples": 0,
+            "records": []
+        },
+        "loadCSR": {
+            "operation": "loadCSR",
+            "mean": 17384.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                17384.0
+            ]
+        },
+        "SpGemm_warmup": {
+            "operation": "SpGemm_warmup",
+            "mean": 9431156.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                9431156.0
+            ]
+        },
+        "SpGemm": {
+            "operation": "SpGemm",
+            "mean": 9402024.8,
+            "sd": 4615.560567579516,
+            "nSamples": 5,
+            "records": [
+                9406245.0,
+                9408783.0,
+                9398726.0,
+                9399339.0,
+                9397031.0
+            ]
+        },
+        "writeCSR_warmup": {
+            "operation": "writeCSR_warmup",
+            "mean": null,
+            "sd": null,
+            "nSamples": 0,
+            "records": []
+        },
+        "writeCSR": {
+            "operation": "writeCSR",
+            "mean": 10423.0,
+            "sd": 0.0,
+            "nSamples": 1,
+            "records": [
+                10423.0
+            ]
+        }
+    }
+}

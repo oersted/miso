@@ -1,0 +1,17 @@
+Skip dense:Dense
+
+Skip hash:Hash
+
+Skip heap:Heap
+
+Skip merge:Merge
+
+Skip eigen:Eigen
+
+Do nothing: No kernel selected for reporting.
+Gather information from following files:
+
+
+real	0m0.334s
+user	0m0.306s
+sys	0m0.028s
