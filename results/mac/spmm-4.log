@@ -1,0 +1,773 @@
+Will execute following workloads:
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload.json
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload-report.json scalar_repeat=5 simd_repeat=5
+
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload-report.json scalar_repeat=5 simd_repeat=5
+
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload-report.json scalar_repeat=5 simd_repeat=5
+
+Will execute following workloads:
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload.json
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload-report.json 5 5']
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload-report.json 5 5']
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload-report.json 5 5']
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload-report.json 5 5']
+Will execute following workloads:
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload.json
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload-report.json scalar_repeat=5 simd_repeat=5
+
+Will execute following workloads:
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload.json
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-3-workload.json
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload-report.json 5 5']
+Executing harness: 
+workloadFile = /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload.json
+reportFile=/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload-report.json scalar_repeat=5 simd_repeat=5
+
+[PosixPath('/root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt'), '-d', '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload', PosixPath('/root/ModifiedGem5ForSIMDMerge/configs/example/se.py'), '--caches', '--l2cache', '--mem-type', 'SimpleMemory', '--cacheline_size', '64', '--cpu-type', 'O3_ARM_v7a_3', '--l1d-hwp-type', 'TaggedPrefetcher', '--mem-size', '2GB', '--param', '\nsystem.cpu[:].dcache.prefetcher.degree = 4\nsystem.cpu[:].dcache.prefetch_on_access=True\nsystem.cpu[:].isa[:].sve_vl_se = 4 / 4\nfrom common.SpSpLatency import *\nresetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))\n', '--cmd', '/root/SpMMBenchmarks/build/Harness/Harness', '-o', '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload-report.json 5 5']warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+Global frequency set at 1000000000000 ticks per second
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+Global frequency set at 1000000000000 ticks per second
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+Global frequency set at 1000000000000 ticks per second
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+Global frequency set at 1000000000000 ticks per second
+warn: tol2bus.master is deprecated. `master` is now called `mem_side_ports`
+warn: membus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: tol2bus.slave is deprecated. `slave` is now called `cpu_side_ports`
+warn: membus.master is deprecated. `master` is now called `mem_side_ports`
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+0: system.remote_gdb: listening for remote gdb on port 7000
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+0: system.remote_gdb: listening for remote gdb on port 7001
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+0: system.remote_gdb: listening for remote gdb on port 7002
+0: system.remote_gdb: listening for remote gdb on port 7003
+0: system.remote_gdb: listening for remote gdb on port 7004
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+0: system.remote_gdb: listening for remote gdb on port 7005
+00: system.remote_gdb: listening for remote gdb on port 7007: system.remote_gdb: listening for remote gdb on port 7006
+
+0: system.remote_gdb: listening for remote gdb on port 7008
+0: system.remote_gdb: listening for remote gdb on port 7009
+00: system.remote_gdb: listening for remote gdb on port 7011
+: system.remote_gdb: listening for remote gdb on port 7010
+0: system.remote_gdb: listening for remote gdb on port 7012
+0: system.remote_gdb: listening for remote gdb on port 7013
+0: system.remote_gdb: listening for remote gdb on port 7014
+0: system.remote_gdb: listening for remote gdb on port 7015
+0: system.remote_gdb: listening for remote gdb on port 7016
+0: system.remote_gdb: listening for remote gdb on port 7017
+0: system.remote_gdb: listening for remote gdb on port 7018
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:30
+gem5 executing on b8347f784010, pid 788
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-1-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-1-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+0: system.remote_gdb: listening for remote gdb on port 7019
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 735
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 728
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 748
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 725
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 769
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 765
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 787
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-0-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-0-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 752
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 731
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 741
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 781
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-3-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-3-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 758
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 777
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Entering event queue @ 0.  Starting simulation...
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 761
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 733
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 791
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-2-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-2-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 793
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-3-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-3-workload.json /root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-3-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:31
+gem5 executing on b8347f784010, pid 744
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload.json /root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 20.1.0.2
+gem5 compiled Dec  2 2021 08:51:13
+gem5 started Mar 27 2023 20:20:32
+gem5 executing on b8347f784010, pid 774
+command line: /root/ModifiedGem5ForSIMDMerge/build/ARM/gem5.opt -d /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload /root/ModifiedGem5ForSIMDMerge/configs/example/se.py --caches --l2cache --mem-type SimpleMemory --cacheline_size 64 --cpu-type O3_ARM_v7a_3 --l1d-hwp-type TaggedPrefetcher --mem-size 2GB --param '
+system.cpu[:].dcache.prefetcher.degree = 4
+system.cpu[:].dcache.prefetch_on_access=True
+system.cpu[:].isa[:].sve_vl_se = 4 / 4
+from common.SpSpLatency import *
+resetSpSpLatency(system.cpu[0].fuPool.FUList[4],SpSpLatencySetting(vecLen=4,KeyCombineLat=3,MatchLat=1,SEPermuteLat=1))
+' --cmd /root/SpMMBenchmarks/build/Harness/Harness -o '/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload.json /root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload-report.json 5 5'
+
+Reset SpSpLatency!
+{'v': 4, 'v2': 8, 'logV': 2, 'logV2': 3, 'KeyCombineLat': 3, 'MatchLat': 1, 'SEPermuteLat': 1}
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+warn: ignoring syscall mprotect(...)
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+warn: ignoring syscall mprotect(...)
+info: Increasing stack size by one page.
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+warn: ignoring syscall mprotect(...)
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-1-workload.json	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-1-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload.json	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload.json	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-3-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload.json	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload.json	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload.json	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload.json	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload.json	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload.json	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload.json	/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-3-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-0-workload.json	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-0-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload.json	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload.json	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload.json	/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-3-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-3-workload.json	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-3-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload.json	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload.json	/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-2-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-3-workload.json	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-3-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-2-workload.json	/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-2-workload-report.json	5	5	
+CMD:	/root/SpMMBenchmarks/build/Harness/Harness	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload.json	/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload-report.json	5	5	
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-0-workload-report.json
+Exiting @ tick 5313287500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-0-workload-report.json
+Exiting @ tick 7101716500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-0-workload-report.json
+Exiting @ tick 18224111500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-0-workload-report.json
+Exiting @ tick 20293326500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-1-workload-report.json
+Exiting @ tick 23353618500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-1-workload-report.json
+Exiting @ tick 33180367500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-1-workload-report.json
+Exiting @ tick 54564800500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/merge/middleExpand-2-workload-report.json
+Exiting @ tick 56848310500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/heap/middleExpand-2-workload-report.json
+Exiting @ tick 82149967500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/dense/middleExpand-2-workload-report.json
+Exiting @ tick 120006335500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/hash/middleExpand-1-workload-report.json
+Exiting @ tick 92790615500 because exiting with last active thread context
+/root/SpMMBenchmarks/workload/middleExpand/eigen/middleExpand-0-workload-report.json
+Exiting @ tick 81077833500 because exiting with last active thread context
