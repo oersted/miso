@@ -10,13 +10,15 @@ DISTRIBUTIONS=("uniform" "gaussian" "zipfian" "exponential" "lognormal" "geometr
 cd /root/basicProblemExplore/
 
 # Set the sizes and overlap
-a_size=100000
-b_size=100000
-overlap=50000
+a_size=10000
+b_size=10000
+overlap=5000
 
 # Run the simulation for each distribution
 for dist in "${DISTRIBUTIONS[@]}"; do
-    for ((run=1; run<=5; run++)); do
+    for ((run=1; run<=25; run++)); do
+        echo "######## Run: ${run}/25 ########"
+
         # Generate the merge file
         cd SetOperation
         python generateMergeDists.py "${dist}_${run}.bin" $a_size $b_size $overlap $dist

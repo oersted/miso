@@ -8,6 +8,7 @@ matplotlib = "*"
 pandas = "*"
 ipykernel = "*"
 requests = "*"
+seaborn = "*"
 
 [dev-packages]
 ipykernel = "*"

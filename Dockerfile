@@ -11,6 +11,6 @@ RUN chmod +x experiment-5.sh
 
 COPY experiment-6.sh .
 RUN chmod +x experiment-6.sh
-COPY generateMergeDists.py cd basicProblemExplore/SetOperation/
+COPY generateMergeDists.py basicProblemExplore/SetOperation/
 
-ENTRYPOINT ["/bin/bash", "/root/experiment-6.sh"]
+ENTRYPOINT ["/bin/bash", "/root/experiment-5.sh"]
